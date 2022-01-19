@@ -1,0 +1,15 @@
+{
+  "name": "anshul-node-todo",
+  "version": "1.0.0",
+  "description": "backend services for todo app",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server"
+  },
+  "author": "Anshul Jain",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1",
+    "nodemon": "^2.0.15"
+  }
+}
