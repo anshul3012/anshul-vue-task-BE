@@ -23,8 +23,9 @@ const init = async () => {
     handler: async (request, h) => {
       let exist = false;
       try {
+        const userName = request.payload.userName;
         for (const user of users) {
-          if (user.userName === request.payload.userName) {
+          if (user.userName === userName) {
             exist = true;
             break;
           } else {
@@ -33,6 +34,7 @@ const init = async () => {
         };
         if (!exist) {
           await users.push(request.payload);
+          tasks[userName] = [];
         }
         return !exist;
       } catch (error) {
