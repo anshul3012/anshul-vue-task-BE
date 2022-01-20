@@ -134,6 +134,23 @@ const init = async () => {
     }
   });
 
+  server.route({
+    method: 'POST',
+    path: '/updatedescription',
+    handler: async (request, h) => {
+      try {
+        const userName = await request.payload.userName;
+        const index = await request.payload.index;
+        const description = await request.payload.description;
+        tasks[userName][index].description = description;
+        const newDescription = await tasks[userName][index].description;
+        return newDescription;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  });
+
   await server.start();
   console.log('Server running on %s', server.info.uri);
 };
