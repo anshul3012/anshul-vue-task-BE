@@ -10,14 +10,6 @@ const init = async () => {
   });
 
   server.route({
-    method: 'GET',
-    path: '/signup',
-    handler: (request, h) => {
-      return 'Hello World!';
-    }
-  });
-
-  server.route({
     method: 'POST',
     path: '/signup',
     handler: async (request, h) => {
