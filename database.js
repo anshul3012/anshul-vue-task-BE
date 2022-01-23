@@ -3,8 +3,8 @@ const users = [
   { userName: 'test', password: 'test' }
 ];
 const tasks = {
-  dev: [{description: '1', status: false}, {description: '2', status: true}, {description: '3', status: false}],
-  test: [{description: 'a', status: true}, {description: 'b', status: false}, {description: 'c', status: true}]
+  dev: [{description: 'Hello World !!', status: false}, {description: 'Stay Safe, Stay Healthy', status: true}],
+  test: []
 };
 
 module.exports = { users, tasks }
